@@ -1,0 +1,190 @@
+I, [2014-06-30T14:00:48.349708 #73271]  INFO -- Kitchen: -----> Starting Kitchen (v1.2.2.dev)
+I, [2014-06-30T14:00:49.659381 #73271]  INFO -- Kitchen: -----> Creating <default-centos-64>...
+I, [2014-06-30T14:01:36.468182 #73271]  INFO -- Kitchen: -----> Converging <default-centos-64>...
+E, [2014-06-30T14:01:36.514819 #73271] ERROR -- Kitchen: ------Exception-------
+E, [2014-06-30T14:01:36.514863 #73271] ERROR -- Kitchen: Class: Kitchen::ActionFailed
+E, [2014-06-30T14:01:36.514888 #73271] ERROR -- Kitchen: Message: Failed to complete #converge action: [The metadata at '/Users/adam/src/opscode/materialize/cookbooks/materialize' does not contain a 'name' attribute. While Chef does not strictly enforce this requirement, Ridley cannot continue without a valid metadata 'name' entry.]
+E, [2014-06-30T14:01:36.514912 #73271] ERROR -- Kitchen: ---Nested Exception---
+E, [2014-06-30T14:01:36.514935 #73271] ERROR -- Kitchen: Class: Ridley::Errors::MissingNameAttribute
+E, [2014-06-30T14:01:36.514958 #73271] ERROR -- Kitchen: Message: The metadata at '/Users/adam/src/opscode/materialize/cookbooks/materialize' does not contain a 'name' attribute. While Chef does not strictly enforce this requirement, Ridley cannot continue without a valid metadata 'name' entry.
+E, [2014-06-30T14:01:36.514980 #73271] ERROR -- Kitchen: ------Backtrace-------
+E, [2014-06-30T14:01:36.515003 #73271] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/ridley-3.1.0/lib/ridley/chef/cookbook.rb:44:in `from_path'
+E, [2014-06-30T14:01:36.515026 #73271] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-3.1.1/lib/berkshelf/locations/base.rb:62:in `validate_cached!'
+E, [2014-06-30T14:01:36.515048 #73271] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-3.1.1/lib/berkshelf/locations/path.rb:16:in `install'
+E, [2014-06-30T14:01:36.515071 #73271] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-3.1.1/lib/berkshelf/installer.rb:179:in `block in download_locations'
+E, [2014-06-30T14:01:36.515094 #73271] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-3.1.1/lib/berkshelf/installer.rb:176:in `each'
+E, [2014-06-30T14:01:36.515128 #73271] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-3.1.1/lib/berkshelf/installer.rb:176:in `download_locations'
+E, [2014-06-30T14:01:36.515153 #73271] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-3.1.1/lib/berkshelf/installer.rb:149:in `install_from_universe'
+E, [2014-06-30T14:01:36.515176 #73271] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-3.1.1/lib/berkshelf/installer.rb:39:in `run'
+E, [2014-06-30T14:01:36.515199 #73271] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-3.1.1/lib/berkshelf/berksfile.rb:371:in `install'
+E, [2014-06-30T14:01:36.515222 #73271] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-3.1.1/lib/berkshelf/berksfile.rb:590:in `vendor'
+E, [2014-06-30T14:01:36.515245 #73271] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/provisioner/chef/berkshelf.rb:55:in `block in resolve'
+E, [2014-06-30T14:01:36.515267 #73271] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/thor-0.19.1/lib/thor/shell/basic.rb:20:in `mute'
+E, [2014-06-30T14:01:36.515290 #73271] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/provisioner/chef/berkshelf.rb:51:in `resolve'
+E, [2014-06-30T14:01:36.515313 #73271] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/provisioner/chef_base.rb:394:in `block in resolve_with_berkshelf'
+E, [2014-06-30T14:01:36.515336 #73271] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/provisioner/chef_base.rb:393:in `synchronize'
+E, [2014-06-30T14:01:36.515359 #73271] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/provisioner/chef_base.rb:393:in `resolve_with_berkshelf'
+E, [2014-06-30T14:01:36.515381 #73271] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/provisioner/chef_base.rb:259:in `prepare_cookbooks'
+E, [2014-06-30T14:01:36.515431 #73271] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/provisioner/chef_base.rb:120:in `create_sandbox'
+E, [2014-06-30T14:01:36.515457 #73271] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/provisioner/chef_zero.rb:36:in `create_sandbox'
+E, [2014-06-30T14:01:36.515480 #73271] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/ssh_base.rb:40:in `converge'
+E, [2014-06-30T14:01:36.515502 #73271] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/kitchen-vagrant-0.15.0/lib/kitchen/driver/vagrant.rb:75:in `converge'
+E, [2014-06-30T14:01:36.515525 #73271] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:280:in `public_send'
+E, [2014-06-30T14:01:36.515547 #73271] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:280:in `block in perform_action'
+E, [2014-06-30T14:01:36.515569 #73271] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:315:in `call'
+E, [2014-06-30T14:01:36.515592 #73271] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:315:in `synchronize_or_call'
+E, [2014-06-30T14:01:36.515614 #73271] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:290:in `block in action'
+E, [2014-06-30T14:01:36.515636 #73271] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/2.1.0/benchmark.rb:279:in `measure'
+E, [2014-06-30T14:01:36.515659 #73271] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:289:in `action'
+E, [2014-06-30T14:01:36.515681 #73271] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:280:in `perform_action'
+E, [2014-06-30T14:01:36.515704 #73271] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:263:in `converge_action'
+E, [2014-06-30T14:01:36.515726 #73271] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:253:in `block in transition_to'
+E, [2014-06-30T14:01:36.515759 #73271] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:252:in `each'
+E, [2014-06-30T14:01:36.515795 #73271] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:252:in `transition_to'
+E, [2014-06-30T14:01:36.515818 #73271] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:119:in `converge'
+E, [2014-06-30T14:01:36.515840 #73271] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/command.rb:109:in `public_send'
+E, [2014-06-30T14:01:36.515896 #73271] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/command.rb:109:in `block (2 levels) in run_action'
+E, [2014-06-30T14:01:36.515931 #73271] ERROR -- Kitchen: ----------------------
+I, [2014-06-30T14:02:22.046076 #73502]  INFO -- Kitchen: -----> Starting Kitchen (v1.2.2.dev)
+I, [2014-06-30T14:02:23.177384 #73502]  INFO -- Kitchen: -----> Converging <default-centos-64>...
+E, [2014-06-30T14:02:24.635559 #73502] ERROR -- Kitchen: ------Exception-------
+E, [2014-06-30T14:02:24.635609 #73502] ERROR -- Kitchen: Class: Kitchen::ActionFailed
+E, [2014-06-30T14:02:24.635636 #73502] ERROR -- Kitchen: Message: Failed to complete #converge action: [The metadata at '/Users/adam/.berkshelf/cookbooks/foodcritic-0.0.8' does not contain a 'name' attribute. While Chef does not strictly enforce this requirement, Ridley cannot continue without a valid metadata 'name' entry.]
+E, [2014-06-30T14:02:24.635659 #73502] ERROR -- Kitchen: ---Nested Exception---
+E, [2014-06-30T14:02:24.635690 #73502] ERROR -- Kitchen: Class: Ridley::Errors::MissingNameAttribute
+E, [2014-06-30T14:02:24.635711 #73502] ERROR -- Kitchen: Message: The metadata at '/Users/adam/.berkshelf/cookbooks/foodcritic-0.0.8' does not contain a 'name' attribute. While Chef does not strictly enforce this requirement, Ridley cannot continue without a valid metadata 'name' entry.
+E, [2014-06-30T14:02:24.635732 #73502] ERROR -- Kitchen: ------Backtrace-------
+E, [2014-06-30T14:02:24.635774 #73502] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/ridley-3.1.0/lib/ridley/chef/cookbook.rb:44:in `from_path'
+E, [2014-06-30T14:02:24.635798 #73502] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-3.1.1/lib/berkshelf/cached_cookbook.rb:15:in `from_store_path'
+E, [2014-06-30T14:02:24.635833 #73502] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-3.1.1/lib/berkshelf/cookbook_store.rb:106:in `block in cookbooks'
+E, [2014-06-30T14:02:24.635855 #73502] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-3.1.1/lib/berkshelf/cookbook_store.rb:97:in `collect'
+E, [2014-06-30T14:02:24.635876 #73502] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-3.1.1/lib/berkshelf/cookbook_store.rb:97:in `cookbooks'
+E, [2014-06-30T14:02:24.635897 #73502] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-3.1.1/lib/berkshelf/resolver/graph.rb:8:in `populate_store'
+E, [2014-06-30T14:02:24.635917 #73502] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-3.1.1/lib/berkshelf/resolver.rb:73:in `resolve'
+E, [2014-06-30T14:02:24.635938 #73502] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-3.1.1/lib/berkshelf/installer.rb:170:in `install_from_universe'
+E, [2014-06-30T14:02:24.635976 #73502] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-3.1.1/lib/berkshelf/installer.rb:39:in `run'
+E, [2014-06-30T14:02:24.635998 #73502] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-3.1.1/lib/berkshelf/berksfile.rb:371:in `install'
+E, [2014-06-30T14:02:24.636022 #73502] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-3.1.1/lib/berkshelf/berksfile.rb:590:in `vendor'
+E, [2014-06-30T14:02:24.636043 #73502] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/provisioner/chef/berkshelf.rb:55:in `block in resolve'
+E, [2014-06-30T14:02:24.636063 #73502] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/thor-0.19.1/lib/thor/shell/basic.rb:20:in `mute'
+E, [2014-06-30T14:02:24.636084 #73502] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/provisioner/chef/berkshelf.rb:51:in `resolve'
+E, [2014-06-30T14:02:24.636104 #73502] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/provisioner/chef_base.rb:394:in `block in resolve_with_berkshelf'
+E, [2014-06-30T14:02:24.636125 #73502] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/provisioner/chef_base.rb:393:in `synchronize'
+E, [2014-06-30T14:02:24.636145 #73502] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/provisioner/chef_base.rb:393:in `resolve_with_berkshelf'
+E, [2014-06-30T14:02:24.636165 #73502] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/provisioner/chef_base.rb:259:in `prepare_cookbooks'
+E, [2014-06-30T14:02:24.636186 #73502] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/provisioner/chef_base.rb:120:in `create_sandbox'
+E, [2014-06-30T14:02:24.636210 #73502] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/provisioner/chef_zero.rb:36:in `create_sandbox'
+E, [2014-06-30T14:02:24.636231 #73502] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/ssh_base.rb:40:in `converge'
+E, [2014-06-30T14:02:24.636251 #73502] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/kitchen-vagrant-0.15.0/lib/kitchen/driver/vagrant.rb:75:in `converge'
+E, [2014-06-30T14:02:24.636272 #73502] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:280:in `public_send'
+E, [2014-06-30T14:02:24.636292 #73502] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:280:in `block in perform_action'
+E, [2014-06-30T14:02:24.636313 #73502] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:315:in `call'
+E, [2014-06-30T14:02:24.636333 #73502] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:315:in `synchronize_or_call'
+E, [2014-06-30T14:02:24.636361 #73502] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:290:in `block in action'
+E, [2014-06-30T14:02:24.636383 #73502] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/2.1.0/benchmark.rb:279:in `measure'
+E, [2014-06-30T14:02:24.636408 #73502] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:289:in `action'
+E, [2014-06-30T14:02:24.636429 #73502] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:280:in `perform_action'
+E, [2014-06-30T14:02:24.636449 #73502] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:263:in `converge_action'
+E, [2014-06-30T14:02:24.636470 #73502] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:253:in `block in transition_to'
+E, [2014-06-30T14:02:24.636506 #73502] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:252:in `each'
+E, [2014-06-30T14:02:24.636527 #73502] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:252:in `transition_to'
+E, [2014-06-30T14:02:24.636548 #73502] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:119:in `converge'
+E, [2014-06-30T14:02:24.636568 #73502] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/command.rb:109:in `public_send'
+E, [2014-06-30T14:02:24.636592 #73502] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/command.rb:109:in `block (2 levels) in run_action'
+E, [2014-06-30T14:02:24.636613 #73502] ERROR -- Kitchen: ----------------------
+I, [2014-06-30T14:03:07.343141 #73626]  INFO -- Kitchen: -----> Starting Kitchen (v1.2.2.dev)
+I, [2014-06-30T14:03:08.476784 #73626]  INFO -- Kitchen: -----> Destroying <default-centos-64>...
+I, [2014-06-30T14:03:14.885809 #73626]  INFO -- Kitchen: -----> Kitchen is finished. (0m7.54s)
+I, [2014-06-30T14:04:02.488503 #73910]  INFO -- Kitchen: -----> Starting Kitchen (v1.2.2.dev)
+I, [2014-06-30T14:04:03.591111 #73910]  INFO -- Kitchen: -----> Creating <default-centos-64>...
+I, [2014-06-30T14:04:47.161949 #73910]  INFO -- Kitchen: -----> Converging <default-centos-64>...
+E, [2014-06-30T14:04:48.543963 #73910] ERROR -- Kitchen: ------Exception-------
+E, [2014-06-30T14:04:48.544004 #73910] ERROR -- Kitchen: Class: Kitchen::ActionFailed
+E, [2014-06-30T14:04:48.544028 #73910] ERROR -- Kitchen: Message: Failed to complete #converge action: [The metadata at '/Users/adam/.berkshelf/cookbooks/foodcritic-0.0.8' does not contain a 'name' attribute. While Chef does not strictly enforce this requirement, Ridley cannot continue without a valid metadata 'name' entry.]
+E, [2014-06-30T14:04:48.544069 #73910] ERROR -- Kitchen: ---Nested Exception---
+E, [2014-06-30T14:04:48.544091 #73910] ERROR -- Kitchen: Class: Ridley::Errors::MissingNameAttribute
+E, [2014-06-30T14:04:48.544112 #73910] ERROR -- Kitchen: Message: The metadata at '/Users/adam/.berkshelf/cookbooks/foodcritic-0.0.8' does not contain a 'name' attribute. While Chef does not strictly enforce this requirement, Ridley cannot continue without a valid metadata 'name' entry.
+E, [2014-06-30T14:04:48.544134 #73910] ERROR -- Kitchen: ------Backtrace-------
+E, [2014-06-30T14:04:48.544155 #73910] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/ridley-3.1.0/lib/ridley/chef/cookbook.rb:44:in `from_path'
+E, [2014-06-30T14:04:48.544177 #73910] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-3.1.1/lib/berkshelf/cached_cookbook.rb:15:in `from_store_path'
+E, [2014-06-30T14:04:48.544202 #73910] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-3.1.1/lib/berkshelf/cookbook_store.rb:106:in `block in cookbooks'
+E, [2014-06-30T14:04:48.544224 #73910] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-3.1.1/lib/berkshelf/cookbook_store.rb:97:in `collect'
+E, [2014-06-30T14:04:48.544246 #73910] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-3.1.1/lib/berkshelf/cookbook_store.rb:97:in `cookbooks'
+E, [2014-06-30T14:04:48.544280 #73910] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-3.1.1/lib/berkshelf/resolver/graph.rb:8:in `populate_store'
+E, [2014-06-30T14:04:48.544303 #73910] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-3.1.1/lib/berkshelf/resolver.rb:73:in `resolve'
+E, [2014-06-30T14:04:48.544325 #73910] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-3.1.1/lib/berkshelf/installer.rb:170:in `install_from_universe'
+E, [2014-06-30T14:04:48.544346 #73910] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-3.1.1/lib/berkshelf/installer.rb:39:in `run'
+E, [2014-06-30T14:04:48.544367 #73910] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-3.1.1/lib/berkshelf/berksfile.rb:371:in `install'
+E, [2014-06-30T14:04:48.544388 #73910] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/berkshelf-3.1.1/lib/berkshelf/berksfile.rb:590:in `vendor'
+E, [2014-06-30T14:04:48.544414 #73910] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/provisioner/chef/berkshelf.rb:55:in `block in resolve'
+E, [2014-06-30T14:04:48.544436 #73910] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/thor-0.19.1/lib/thor/shell/basic.rb:20:in `mute'
+E, [2014-06-30T14:04:48.544457 #73910] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/provisioner/chef/berkshelf.rb:51:in `resolve'
+E, [2014-06-30T14:04:48.544478 #73910] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/provisioner/chef_base.rb:394:in `block in resolve_with_berkshelf'
+E, [2014-06-30T14:04:48.544499 #73910] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/provisioner/chef_base.rb:393:in `synchronize'
+E, [2014-06-30T14:04:48.544520 #73910] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/provisioner/chef_base.rb:393:in `resolve_with_berkshelf'
+E, [2014-06-30T14:04:48.544541 #73910] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/provisioner/chef_base.rb:259:in `prepare_cookbooks'
+E, [2014-06-30T14:04:48.544562 #73910] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/provisioner/chef_base.rb:120:in `create_sandbox'
+E, [2014-06-30T14:04:48.544583 #73910] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/provisioner/chef_zero.rb:36:in `create_sandbox'
+E, [2014-06-30T14:04:48.544618 #73910] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/ssh_base.rb:40:in `converge'
+E, [2014-06-30T14:04:48.544642 #73910] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/kitchen-vagrant-0.15.0/lib/kitchen/driver/vagrant.rb:75:in `converge'
+E, [2014-06-30T14:04:48.544675 #73910] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:280:in `public_send'
+E, [2014-06-30T14:04:48.544702 #73910] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:280:in `block in perform_action'
+E, [2014-06-30T14:04:48.544724 #73910] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:315:in `call'
+E, [2014-06-30T14:04:48.544745 #73910] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:315:in `synchronize_or_call'
+E, [2014-06-30T14:04:48.544766 #73910] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:290:in `block in action'
+E, [2014-06-30T14:04:48.544787 #73910] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/2.1.0/benchmark.rb:279:in `measure'
+E, [2014-06-30T14:04:48.544812 #73910] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:289:in `action'
+E, [2014-06-30T14:04:48.544833 #73910] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:280:in `perform_action'
+E, [2014-06-30T14:04:48.544855 #73910] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:263:in `converge_action'
+E, [2014-06-30T14:04:48.544883 #73910] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:253:in `block in transition_to'
+E, [2014-06-30T14:04:48.544906 #73910] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:252:in `each'
+E, [2014-06-30T14:04:48.544927 #73910] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:252:in `transition_to'
+E, [2014-06-30T14:04:48.544948 #73910] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:119:in `converge'
+E, [2014-06-30T14:04:48.544969 #73910] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/command.rb:109:in `public_send'
+E, [2014-06-30T14:04:48.544990 #73910] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/command.rb:109:in `block (2 levels) in run_action'
+E, [2014-06-30T14:04:48.545015 #73910] ERROR -- Kitchen: ----------------------
+I, [2014-06-30T14:05:48.173769 #74195]  INFO -- Kitchen: -----> Starting Kitchen (v1.2.2.dev)
+I, [2014-06-30T14:05:49.282580 #74195]  INFO -- Kitchen: -----> Converging <default-centos-64>...
+E, [2014-06-30T14:05:51.661506 #74195] ERROR -- Kitchen: Converge failed on instance <default-centos-64>.
+I, [2014-06-30T14:06:02.409853 #74227]  INFO -- Kitchen: -----> Starting Kitchen (v1.2.2.dev)
+I, [2014-06-30T14:06:03.543193 #74227]  INFO -- Kitchen: -----> Destroying <default-centos-64>...
+I, [2014-06-30T14:06:10.461691 #74227]  INFO -- Kitchen: -----> Kitchen is finished. (0m8.05s)
+I, [2014-06-30T14:06:32.061605 #74288]  INFO -- Kitchen: -----> Starting Kitchen (v1.2.2.dev)
+I, [2014-06-30T14:06:33.167330 #74288]  INFO -- Kitchen: -----> Creating <default-centos-64>...
+I, [2014-06-30T14:07:23.596420 #74288]  INFO -- Kitchen: -----> Converging <default-centos-64>...
+E, [2014-06-30T14:07:24.816348 #74288] ERROR -- Kitchen: Converge failed on instance <default-centos-64>.
+I, [2014-06-30T14:09:51.078371 #74504]  INFO -- Kitchen: -----> Starting Kitchen (v1.2.2.dev)
+I, [2014-06-30T14:09:52.184741 #74504]  INFO -- Kitchen: -----> Converging <default-centos-64>...
+E, [2014-06-30T14:10:32.935102 #74504] ERROR -- Kitchen: Converge failed on instance <default-centos-64>.
+I, [2014-06-30T14:13:16.553938 #74579]  INFO -- Kitchen: -----> Starting Kitchen (v1.2.2.dev)
+I, [2014-06-30T14:13:17.666929 #74579]  INFO -- Kitchen: -----> Converging <default-centos-64>...
+E, [2014-06-30T14:14:00.164989 #74579] ERROR -- Kitchen: Converge failed on instance <default-centos-64>.
+I, [2014-06-30T14:14:22.126396 #74664]  INFO -- Kitchen: -----> Starting Kitchen (v1.2.2.dev)
+I, [2014-06-30T14:14:23.236341 #74664]  INFO -- Kitchen: -----> Converging <default-centos-64>...
+I, [2014-06-30T14:15:45.883611 #74734]  INFO -- Kitchen: -----> Starting Kitchen (v1.2.2.dev)
+I, [2014-06-30T14:15:47.028583 #74734]  INFO -- Kitchen: -----> Converging <default-centos-64>...
+E, [2014-06-30T14:15:55.796855 #74734] ERROR -- Kitchen: Converge failed on instance <default-centos-64>.
+I, [2014-06-30T14:16:30.400849 #74773]  INFO -- Kitchen: -----> Starting Kitchen (v1.2.2.dev)
+I, [2014-06-30T14:16:31.529153 #74773]  INFO -- Kitchen: -----> Converging <default-centos-64>...
+E, [2014-06-30T14:16:40.328394 #74773] ERROR -- Kitchen: Converge failed on instance <default-centos-64>.
+I, [2014-06-30T14:17:41.091980 #74812]  INFO -- Kitchen: -----> Starting Kitchen (v1.2.2.dev)
+I, [2014-06-30T14:17:42.225324 #74812]  INFO -- Kitchen: -----> Converging <default-centos-64>...
+E, [2014-06-30T14:17:51.128286 #74812] ERROR -- Kitchen: Converge failed on instance <default-centos-64>.
+I, [2014-06-30T14:18:16.345932 #74856]  INFO -- Kitchen: -----> Starting Kitchen (v1.2.2.dev)
+I, [2014-06-30T14:18:17.474873 #74856]  INFO -- Kitchen: -----> Converging <default-centos-64>...
+I, [2014-06-30T14:18:28.377264 #74856]  INFO -- Kitchen: -----> Kitchen is finished. (0m12.03s)
+I, [2014-06-30T14:22:28.543312 #75194]  INFO -- Kitchen: -----> Starting Kitchen (v1.2.2.dev)
+I, [2014-06-30T14:22:29.646251 #75194]  INFO -- Kitchen: -----> Cleaning up any prior instances of <default-centos-64>
+I, [2014-06-30T14:22:29.646994 #75194]  INFO -- Kitchen: -----> Destroying <default-centos-64>...
+I, [2014-06-30T14:22:36.537472 #75194]  INFO -- Kitchen: -----> Testing <default-centos-64>
+I, [2014-06-30T14:22:36.537613 #75194]  INFO -- Kitchen: -----> Creating <default-centos-64>...
+I, [2014-06-30T14:23:21.683941 #75194]  INFO -- Kitchen: -----> Converging <default-centos-64>...
+E, [2014-06-30T14:23:23.242982 #75194] ERROR -- Kitchen: Converge failed on instance <default-centos-64>.
+I, [2014-06-30T14:23:37.898068 #75409]  INFO -- Kitchen: -----> Starting Kitchen (v1.2.2.dev)
+I, [2014-06-30T14:23:38.999065 #75409]  INFO -- Kitchen: -----> Converging <default-centos-64>...
+I, [2014-06-30T14:24:27.356928 #75409]  INFO -- Kitchen: -----> Setting up <default-centos-64>...
+I, [2014-06-30T14:25:05.823727 #75409]  INFO -- Kitchen: -----> Verifying <default-centos-64>...
+I, [2014-06-30T14:25:06.762508 #75409]  INFO -- Kitchen: -----> Kitchen is finished. (1m28.86s)
+I, [2014-06-30T14:26:11.933735 #75884]  INFO -- Kitchen: -----> Starting Kitchen (v1.2.2.dev)
+I, [2014-06-30T14:26:13.039921 #75884]  INFO -- Kitchen: -----> Destroying <default-centos-64>...
+I, [2014-06-30T14:26:19.732721 #75884]  INFO -- Kitchen: -----> Kitchen is finished. (0m7.80s)

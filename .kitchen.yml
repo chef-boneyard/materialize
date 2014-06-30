@@ -1,0 +1,20 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+  clients_path: ./spec/data/clients
+  nodes_path: ./spec/data/nodes
+
+platforms:
+  - name: centos-6.4
+    driver_config:
+      require_chef_omnibus: latest
+
+suites:
+  - name: default
+    run_list:
+      - recipe[materialize::_test]
+      - recipe[materialize::_test_read]
+    attributes:
