@@ -1,5 +1,8 @@
 # materialize
 
+[![Build Status](https://travis-ci.org/chef-cookbooks/materialize.svg?branch=master)](http://travis-ci.org/chef-cookbooks/materialize)
+[![Cookbook Version](https://img.shields.io/cookbook/v/materialize.svg)](https://supermarket.chef.io/cookbooks/materialize)
+
 This cookbook provides a way to materialize a data-structure into a Chef databag, and then easily
 retrieve it on another node. This can be useful if, for example, you want to amortize the cost of
 a large search one time, rather than repeat it on a thousand nodes.
@@ -82,7 +85,7 @@ $ kitchen test default
 
 ## Copyright
 
-Copyright (c) 2014 Chef Software, Inc.
+Copyright (c) 2014-2015 Chef Software, Inc.
 
 ## License
 
