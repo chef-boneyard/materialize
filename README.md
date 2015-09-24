@@ -1,7 +1,6 @@
 # materialize
 
 [![Build Status](https://travis-ci.org/chef-cookbooks/materialize.svg?branch=master)](http://travis-ci.org/chef-cookbooks/materialize)
-[![Cookbook Version](https://img.shields.io/cookbook/v/materialize.svg)](https://supermarket.chef.io/cookbooks/materialize)
 
 This cookbook provides a way to materialize a data-structure into a Chef databag, and then easily
 retrieve it on another node. This can be useful if, for example, you want to amortize the cost of
@@ -83,12 +82,13 @@ And with functional tests!
 $ kitchen test default
 ```
 
-## Copyright
+License & Authors
+-----------------
 
-Copyright (c) 2014-2015 Chef Software, Inc.
+**Author:** Cookbook Engineering Team (<cookbooks@chef.io>)
 
-## License
-
+**Copyright:** 2011-2015, Chef Software, Inc.
+```
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
@@ -100,3 +100,4 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
+```
