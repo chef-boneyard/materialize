@@ -6,6 +6,19 @@ This cookbook provides a way to materialize a data-structure into a Chef databag
 retrieve it on another node. This can be useful if, for example, you want to amortize the cost of
 a large search one time, rather than repeat it on a thousand nodes.
 
+
+Requirements
+------------
+#### Platforms
+* Any platform supported by Chef
+
+#### Chef
+* Chef 11+
+
+#### Cookbooks
+* none
+
+
 ## Usage
 
 1. Make this cookbook a dependency of the cookbook that will use either the read or write functions.
