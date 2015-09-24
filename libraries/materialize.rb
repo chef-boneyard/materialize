@@ -11,7 +11,7 @@ require 'chef/data_bag_item'
 class Chef
   class Materialize
     def self.setup
-      if !@materialize_setup
+      unless @materialize_setup
         m_bag = Chef::DataBag.new
         m_bag.name('materialize')
         m_bag.save
