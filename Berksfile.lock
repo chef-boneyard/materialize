@@ -1,7 +1,0 @@
-DEPENDENCIES
-  materialize
-    path: .
-    metadata: true
-
-GRAPH
-  materialize (0.1.0)

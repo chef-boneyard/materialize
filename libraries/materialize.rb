@@ -24,12 +24,12 @@ class Chef
       setup
     end
 
-    def materialize(key, &block)
+    def materialize(key)
       dbag = Chef::DataBagItem.new
       dbag.data_bag('materialize')
       dbag.raw_data = {
         'id' => key,
-        'data' => block.call
+        'data' => yield
       }
       dbag.save
       dbag
