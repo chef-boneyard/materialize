@@ -23,7 +23,6 @@ describe 'Chef::Materialize' do
   describe 'self.setup' do
     it 'sets up the databag' do
       Chef::Materialize.resetup
-      bag = Chef::DataBag.load('materialize')
       expect(Chef::DataBag.load('materialize')).to be_a_kind_of(Hash)
     end
   end
