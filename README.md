@@ -2,22 +2,21 @@
 
 [![Build Status](https://travis-ci.org/chef-cookbooks/materialize.svg?branch=master)](http://travis-ci.org/chef-cookbooks/materialize)
 
-This cookbook provides a way to materialize a data-structure into a Chef databag, and then easily
-retrieve it on another node. This can be useful if, for example, you want to amortize the cost of
-a large search one time, rather than repeat it on a thousand nodes.
+This cookbook provides a way to materialize a data-structure into a Chef databag, and then easily retrieve it on another node. This can be useful if, for example, you want to amortize the cost of a large search one time, rather than repeat it on a thousand nodes.
 
+## Requirements
 
-Requirements
-------------
-#### Platforms
-* Any platform supported by Chef
+### Platforms
 
-#### Chef
-* Chef 11+
+- Any platform supported by Chef
 
-#### Cookbooks
-* none
+### Chef
 
+- Chef 12.1+
+
+### Cookbooks
+
+- none
 
 ## Usage
 
@@ -27,8 +26,7 @@ Requirements
 
 ## Write
 
-Lets say you have a cookbook with a big search, to build something like ssh_known_hosts. In a typical
-Chef cookbook, you might write the following:
+Lets say you have a cookbook with a big search, to build something like ssh_known_hosts. In a typical Chef cookbook, you might write the following:
 
 ```ruby
 data = []
@@ -39,9 +37,7 @@ end
 data = data.sort
 ```
 
-To build up your data for the ssh_known_hosts file. This woudl result in a global search across
-every node in your infrastructure on every convergence, which, as you get larger, will be pretty
-brutal.
+To build up your data for the ssh_known_hosts file. This woudl result in a global search across every node in your infrastructure on every convergence, which, as you get larger, will be pretty brutal.
 
 With this cookbook, you would do the following instead:
 
@@ -56,10 +52,7 @@ materialize('ssh_known_hosts') do
 end
 ```
 
-This would take the output of your search query and store it in a data bag called 'materialize', with
-the key of 'ssh_known_hosts'. You want to make sure this happens _on one node only_, rather than on
-every node. (For example, move it to another recipe, or have a node attribute, or check on node name - 
-whatever. Just don't run it every time.)
+This would take the output of your search query and store it in a data bag called 'materialize', with the key of 'ssh_known_hosts'. You want to make sure this happens _on one node only_, rather than on every node. (For example, move it to another recipe, or have a node attribute, or check on node name - whatever. Just don't run it every time.)
 
 ## Read
 
@@ -82,7 +75,7 @@ end
 
 ## Development
 
-This cookbook comes with unit tests! 
+This cookbook comes with unit tests!
 
 ```bash
 $ bundle install
@@ -95,12 +88,12 @@ And with functional tests!
 $ kitchen test default
 ```
 
-License & Authors
------------------
+## License & Authors
 
-**Author:** Cookbook Engineering Team (<cookbooks@chef.io>)
+**Author:** Cookbook Engineering Team ([cookbooks@chef.io](mailto:cookbooks@chef.io))
 
 **Copyright:** 2011-2016, Chef Software, Inc.
+
 ```
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
