@@ -7,7 +7,7 @@ describe 'Chef::Materialize' do
   let(:data) do
     {
       'node1' => 'karma',
-      'node2' => 'is dope'
+      'node2' => 'is dope',
     }
   end
 

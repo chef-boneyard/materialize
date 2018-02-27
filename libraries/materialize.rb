@@ -29,7 +29,7 @@ class Chef
       dbag.data_bag('materialize')
       dbag.raw_data = {
         'id' => key,
-        'data' => yield
+        'data' => yield,
       }
       dbag.save
       dbag
